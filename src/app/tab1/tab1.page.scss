@@ -1,0 +1,24 @@
+ion-header {
+    ion-icon {
+        font-size: 20px;
+    }
+}
+
+ion-content {
+    .outerBox{
+        border: 1px solid #ffffff;
+        min-width: 160px;
+        min-height: 160px;
+    }  
+
+    .textCss{
+        font-size: 25px;
+        // padding: 20px;
+        // margin-top: 35%;
+        text-align: center;
+        color: #ffffff;
+        padding: 5px;
+        margin-top: 75%;
+        background: #dada;
+    }
+}

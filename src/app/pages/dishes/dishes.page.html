@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{cuisineName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let dish of dishesArray" (click)="dishes(dish.id, dish.name)">
+    <div class="outerBox" style="background: url({{dish.image}}) 0 0/100% 100% no-repeat;">
+      <div class="textCss">{{dish.name}}</div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,81 @@
+ion-content{
+
+    .favIcon {
+        float: right;
+        color: #fff;
+        font-size: 30px;
+        margin-top: -20px;
+        margin-right: 5px;
+    }
+
+    .TitleDiv {
+        margin-top: 20px;
+        text-align: center;
+        .span1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            // font-family: 'Courier New', Courier, monospace;
+            font-family: cursive;
+        }
+
+        .reviewDiv {
+            font-size: 18px;
+            margin: 10px;
+
+            .col1 {
+                font-size: 25px;
+            }
+            .col2 {
+                font-size: 23px;
+            }
+        }
+    }
+
+    .timeDiv {
+        font-size: 18px;
+        // padding: 5px;
+        .span1 {
+            font-weight: bold;
+            font-family: auto;
+        }
+    }
+
+    .heading{
+       font-size: 20px;
+       font-weight: bold; 
+       font-family: auto;
+       margin-bottom: 5px;
+    }
+
+    .containerDiv {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .commentCard {
+        padding: 10px;
+        background: #dada;
+        color: #000;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    .commentCard1 {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .commentShowDiv {
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+        text-align: center;
+
+        ion-item {
+            width: 80%;
+            margin-left: 30px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<ion-content>
+
+  <ion-searchbar type="text" placeholder="search your recipe" debounce="500" (ionChange)="getItems($event)"></ion-searchbar>
+
+  <ion-list >
+    <ion-item *ngFor="let item of items" (click)="singleDish(item.name)">{{ item.name }}</ion-item>
+  </ion-list>
+  
+</ion-content>

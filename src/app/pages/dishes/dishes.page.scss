@@ -1,0 +1,23 @@
+ion-content {
+    .outerBox{
+        border: 1px solid #ffffff;
+        // width: 160px;
+        height: 215px;
+    }  
+    .textDiv {
+        span {
+            font-size: 18px;
+            font-family: serif;
+        }
+    }
+    .textCss{
+        font-size: 25px;
+        // padding: 20px;
+        // margin-top: 35%;
+        text-align: center;
+        color: #ffffff;
+        padding: 5px;
+        margin-top: 174px;
+        background: #dada;
+    }
+}

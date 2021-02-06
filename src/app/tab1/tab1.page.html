@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-row>
+      <ion-col >
+        <ion-title >
+          Home
+        </ion-title>
+      </ion-col>
+      <ion-col size="1.3">
+        <ion-icon name="search" routerLink="/search"></ion-icon>
+      </ion-col>
+      <ion-col size="1.4" *ngIf="uid != '' && uid != null">
+        <div>
+          <ion-icon name="power" routerLink="/login" color="light"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <div >
+      <ion-row>
+        <ion-col *ngFor="let cuisine of cuisineArray" size="6" (click)="cuisines(cuisine.id, cuisine.title)">
+          <div class="outerBox" style="background: url({{cuisine.image}}) 0 0/100% 100% no-repeat;">
+            <div class="textCss">{{cuisine.title}}</div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <!--<app-explore-container name="Tab 1 page"></app-explore-container>-->
+</ion-content>

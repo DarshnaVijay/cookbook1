@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Add Private Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div style="margin-top: 10px;">
+    <form #form="ngForm" (ngSubmit)="addNotes(form.value)">
+      <ion-item>
+        <ion-label position="floating">Topic</ion-label>
+        <ion-input name="topic" ngModel required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Notes</ion-label>
+        <ion-textarea rows="2" auto-grow name="notes" ngModel required></ion-textarea>
+      </ion-item>
+
+      <ion-button [disabled]="form.invalid" expand="block">Add</ion-button>
+    </form>
+  </div>
+</ion-content>

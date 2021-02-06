@@ -1,0 +1,44 @@
+<ion-content padding>
+
+  <!--<div style="width: 100%;float: left;">
+    <ion-button style="float: right;margin-right: 10px;" fill="outline" color="primary" routerLink="/tabs/tab1">Skip</ion-button>
+  </div>-->
+
+  <ion-card style="width: 50%;margin: 0 auto; margin-top: 35px;">
+    <div >
+      <img src="assets/img/cookbookLogo.png" />
+    </div>  
+  </ion-card>
+
+  <ion-card style="margin-top: 40px;">
+    <ion-card-header>
+      <ion-title>Login</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form class="form" #form="ngForm" (ngSubmit)="login(form.value)">
+
+        <ion-item>
+          <ion-label position="floating" color="primary">Email</ion-label>
+          <ion-input type="email" name="email" ngModel required></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating" color="primary">Password</ion-label>
+          <ion-input type="password" name="password" ngModel required></ion-input>
+        </ion-item>
+    
+        <ion-button type="submit" expand="block" [disabled]="!form.valid">Login</ion-button>
+      </form>
+      <label class="error-message">{{errorMessage}}</label>
+      <label class="success-message">{{successMessage}}</label>
+      
+      <p style="margin-left: 10px;">
+        No account yet? <a routerLink="/register">Create an account.</a>
+      </p>
+    </ion-card-content>
+    
+
+  </ion-card>
+
+  
+  </ion-content>

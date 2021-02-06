@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="headerDiv">
+    <div *ngIf="uid != '' && uid != null"  class="headerDiv1" routerLink="/login">
+      <ion-icon name="power" color="light"></ion-icon>
+    </div>
+    <div style="padding: 10px;"><span>About</span></div>
+  </div>
+  <ion-card class="contentCard">
+    <div *ngIf="uid != '' && uid != null;else notUid">
+      <div> Your Welcome</div>
+      <span>{{email}}</span>
+    </div>
+    <ng-template #notUid>
+      <div>
+        <div>To explore more, please</div>
+        <ion-button routerLink="/login">Login</ion-button>
+      </div>
+    </ng-template>
+  </ion-card>
+
+  <ion-card class="contentCard2">
+    <div>
+      <span><b style="color: purple;font-size: 25px;font-family: 'auto;">Cookbooks</b> may be general, or may specialize in a particular cuisine or category of food.
+        They may include illustrations of finished dishes and preparation steps; discussions of cooking techniques, advice on kitchen equipment, ingredients, and substitutions; historical and cultural notes; and so on.
+      </span>
+    </div>
+  </ion-card>
+</ion-content>

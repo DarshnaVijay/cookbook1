@@ -1,0 +1,66 @@
+<ion-content [fullscreen]="true">
+  <div class="headerDiv">
+    <div *ngIf="uid != '' && uid != null"  class="headerDiv1" routerLink="/login">
+      <ion-icon name="power" color="light"></ion-icon>
+    </div>
+    <div style="padding: 10px;"><span>Your Cuisines</span></div>
+  </div>
+  <ion-card class="contentCard">
+    <div *ngIf="uid != '' && uid != null;else notUid">
+      <div> Your Welcome</div>
+      <span>{{email}}</span>
+    </div>
+    <ng-template #notUid>
+      <div>
+        <div>To explore more, please</div>
+        <ion-button routerLink="/login">Login</ion-button>
+      </div>
+    </ng-template>
+  </ion-card>
+
+  <ion-card class="contentCard2">
+    <div>
+      <span>Add your best recipes with us</span>
+    </div>
+  </ion-card>
+
+  <ion-card class="contentCard2">
+    <div class="myRecipeDiv">
+      <span>Add Your favorites Cuisine </span>
+    </div>
+    <div class="myRecipeDiv1">
+      <ion-select  class="ion-select" multiple="false" value="Lunch"  required name="option1" >
+        <ion-select-option value="Breakfast">Breakfast</ion-select-option>
+        <ion-select-option value="Lunch">Lunch</ion-select-option>
+        <ion-select-option value="Chinese">Chinese</ion-select-option>
+        <ion-select-option value="Dessert">Dessert</ion-select-option>
+        <ion-select-option value="Dinner">Dinner</ion-select-option>
+        <ion-select-option value="Drinks">Drinks</ion-select-option>
+      </ion-select>
+    </div>
+  </ion-card>  
+
+  <ion-card class="contentCard2" *ngIf="uid != '' && uid != null;">
+    <div class="myRecipeDiv">
+      <span>My Recipes</span>
+    </div>
+    <div class="myRecipeDiv1">
+      <ion-row (click)="goRecipe('CHOCOLATE SHAKE')">
+        <ion-col size="3">
+          <ion-thumbnail>
+            <img src="assets/img/dishes/choclate.jpg" />
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col size="9">
+          <p>CHOCOLATE SHAKE</p>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>  
+
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addDish()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
